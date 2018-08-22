@@ -1,5 +1,7 @@
 import csv
 
+numbers = ["0","1","2","3","4","5","6","7","8","9"]
+
 table = open("animalTable.csv")
 reader = csv.reader(table)
 
@@ -36,3 +38,6 @@ while True:
         rowNumber = questionRow[2]
     else:
         rowNumber = questionRow[3]
+    if rowNumber not in numbers:
+        print("Your animal is a",rowNumber)
+        break
