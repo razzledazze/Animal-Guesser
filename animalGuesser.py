@@ -1,3 +1,8 @@
+import csv
+
+table = open("animalTable.csv")
+reader = csv.reader(table)
+
 def checkAnswer(userAnswer,acceptedValues):
     temp = False
     for i in range(5):
@@ -13,4 +18,21 @@ def askQuestion(questionString,acceptedValues,errorMessage):
         print(errorMessage)
     return(checkAnswer(userAnswer,acceptedValues))
 
-print(askQuestion("Is the animal a mammal?: ",["y","Y","yes","Yes","YES","n","N","no","No","NO"],"Please enter Yes or No"))
+def initRowTable():
+    rowTable = []
+    for row in reader:
+        rowTable.append(row)
+    return rowTable
+
+rowTable = initRowTable()
+
+rowNumber = "1"
+while True:
+    for row in rowTable:
+        if row[0] == rowNumber:
+            questionRow = row
+
+    if askQuestion(questionRow[1],["y","Y","yes","Yes","YES","n","N","no","No","NO"],"Please enter Yes or No") == True:
+        rowNumber = questionRow[2]
+    else:
+        rowNumber = questionRow[3]
