@@ -3,7 +3,7 @@
 "3","Is it a fish?: ","17","4"
 "4","Is it a bird?: ","","5"
 "5","Is it a mammal?: ","","6"
-"6","Is it an amphibian?: ","",""
+"6","Is it an amphibian?: ","18","fictional animal"
 "7","Does it have legs?: ","8","Snake"
 "8","Does it have a shell?: ","9","16"
 "9","Does it live in water?: ","Turtle","Tortoise"
@@ -15,3 +15,4 @@
 "15","Does it have 10 walking legs?: ","Lobster","Crab"
 "16","Does it have a U shaped mouth?: ","Alligator","Crocodile"
 "17","Does it live in fresh water?: ","",""
+"18","Does it have slimy skin?: ","Frog","Toad"
